@@ -7,7 +7,7 @@ export default function IceCreamContainer() {
 
    return <div>
       <h2>Number of iceCream - {numOfIceCream} </h2>
-      <button className='p-2 bg-pink-400' onClick={() => dispatch(buyIceCream())}>Buy iceCream</button>
+      <button className='bg-pink-400 p-3 rounded-lg shadow-lg text-white' onClick={() => dispatch(buyIceCream())}>Buy iceCream</button>
    </div>
 
 }
