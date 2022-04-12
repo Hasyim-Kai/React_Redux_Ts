@@ -10,7 +10,12 @@ export const fetchUsers = () => async (dispatch: Dispatch) => {
     dispatch(fetchUsersSuccess(data));
   } catch (error) {
     // error.message is the error message
-    dispatch(fetchUsersFailure(error.message))
+    if (error instanceof Error) {
+      // ✅ TypeScript knows error is Error
+      dispatch(fetchUsersFailure(error.message))
+    } else {
+      console.log('Unexpected error', error);
+    }
   }
 }
 
