@@ -1,3 +1,14 @@
+type CarState = {
+   loading: boolean,
+   cars: [],
+   error: string
+}
+
+interface CarActionTypes {
+   type: string,
+   payload: number
+}
+
 type CakeState = {
    numOfCakes: number
 }
